@@ -1220,10 +1220,6 @@
                     Ver Disponibilidad
                 </a>
                 <button class="promo-flyer-secondary" type="button" onclick="closePromoFlyer()">Ver el catálogo completo</button>
-                <div class="promo-flyer-timer">
-                    <div class="promo-flyer-timer-label">Este aviso se cierra en <span class="promo-flyer-count" id="promo-flyer-count">3</span> s</div>
-                    <div class="promo-flyer-progress"><div class="promo-flyer-progress-bar" id="promo-flyer-progress-bar"></div></div>
-                </div>
             </div>
         </div>
     </div>
@@ -1250,13 +1246,6 @@
     .promo-flyer-btn:hover{transform:translateY(-2px);background:#1EBE5A}
     .promo-flyer-secondary{margin-top:12px;background:none;border:none;color:#B9B4A8;font-family:'Jost',sans-serif;font-size:.82rem;letter-spacing:1px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
     .promo-flyer-secondary:hover{color:#E8CE93}
-    .promo-flyer-timer{margin-top:16px;padding-top:14px;border-top:1px solid rgba(201,162,75,.28)}
-    .promo-flyer-timer-label{font-size:.7rem;letter-spacing:1.6px;text-transform:uppercase;color:#C9A24B;margin-bottom:9px}
-    .promo-flyer-count{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;margin:0 3px;border-radius:11px;background:#C9A24B;color:#fff;font-weight:600;font-size:.78rem;line-height:1;font-variant-numeric:tabular-nums;vertical-align:middle}
-    .promo-flyer-progress{width:100%;height:4px;border-radius:2px;background:rgba(201,162,75,.22);overflow:hidden}
-    .promo-flyer-progress-bar{height:100%;width:100%;border-radius:2px;background:linear-gradient(90deg,#C9A24B,#E8CE93)}
-    .promo-flyer.is-paused .promo-flyer-timer-label{color:#E8CE93}
-    @media (prefers-reduced-motion: reduce){.promo-flyer-progress-bar{transition:none}}
     @media (max-width:480px){
     .promo-flyer{max-width:340px}
     .promo-flyer-image-wrap{height:210px}
@@ -1273,86 +1262,30 @@
     </style>
     <script>
     (function(){
-        var SHOW_DELAY  = 5000;  // el aviso aparece a los 5 segundos
-        var AUTO_CLOSE  = 3;     // y se cierra solo 3 segundos despues
-        var shown = false, remaining = AUTO_CLOSE, lastTs = 0, rafId = null, paused = false;
-
-        function byId(id){ return document.getElementById(id); }
-
-        function paint(){
-            var c = byId('promo-flyer-count');
-            var b = byId('promo-flyer-progress-bar');
-            if(c) c.textContent = Math.max(0, Math.ceil(remaining));
-            if(b) b.style.width = Math.max(0, Math.min(100, (remaining / AUTO_CLOSE) * 100)) + '%';
-        }
-
-        function tick(ts){
-            if(lastTs === 0) lastTs = ts;
-            var dt = (ts - lastTs) / 1000;
-            lastTs = ts;
-            if(!paused){
-                remaining -= dt;
-                paint();
-                if(remaining <= 0){ window.closePromoFlyer(); return; }
-            }
-            rafId = requestAnimationFrame(tick);
-        }
-
-        function startTimer(){
-            remaining = AUTO_CLOSE; lastTs = 0; paused = false;
-            paint();
-            if(rafId) cancelAnimationFrame(rafId);
-            rafId = requestAnimationFrame(tick);
-        }
-
-        function stopTimer(){
-            if(rafId){ cancelAnimationFrame(rafId); rafId = null; }
-        }
-
-        function setPaused(v){
-            paused = v;
-            var f = document.querySelector('.promo-flyer');
-            if(f) f.classList.toggle('is-paused', v);
-        }
-
+        var shown=false;
         function openPromoFlyer(){
-            if(shown) return;
-            shown = true;
-            var el = byId('promo-flyer-overlay');
-            if(!el) return;
+            if(shown)return;
+            shown=true;
+            var el=document.getElementById('promo-flyer-overlay');
+            if(!el)return;
             el.classList.add('active');
-            startTimer();
         }
-
-        window.closePromoFlyer = function(){
-            stopTimer();
-            var el = byId('promo-flyer-overlay');
+        window.closePromoFlyer=function(){
+            var el=document.getElementById('promo-flyer-overlay');
             if(el) el.classList.remove('active');
         };
-
-        window.trackPromoConversion = function(){
+        window.trackPromoConversion=function(){
             try { if(typeof gtag==='function'){ gtag('event','promo_flyer_click',{event_category:'promo',event_label:'Precios en Descuento - Las Hadas'}); } } catch(e){}
         };
-
         document.addEventListener('DOMContentLoaded', function(){
-            var flyer = document.querySelector('.promo-flyer');
-            if(flyer){
-                // el contador se detiene mientras el visitante interactua con el aviso
-                flyer.addEventListener('mouseenter', function(){ setPaused(true); });
-                flyer.addEventListener('mouseleave', function(){ setPaused(false); });
-                flyer.addEventListener('touchstart', function(){ setPaused(true); }, {passive:true});
-                flyer.addEventListener('focusin',  function(){ setPaused(true); });
-            }
-            setTimeout(openPromoFlyer, SHOW_DELAY);
+            setTimeout(openPromoFlyer, 3000);
         });
-
         document.addEventListener('click', function(e){
-            var ov = byId('promo-flyer-overlay');
-            if(ov && e.target === ov){ window.closePromoFlyer(); }
+            var ov=document.getElementById('promo-flyer-overlay');
+            if(ov && e.target===ov){ closePromoFlyer(); }
         });
-
         document.addEventListener('keydown', function(e){
-            if(e.key === 'Escape'){ window.closePromoFlyer(); }
+            if(e.key==='Escape'){ closePromoFlyer(); }
         });
     })();
     </script>
