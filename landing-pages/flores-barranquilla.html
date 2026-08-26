@@ -326,6 +326,27 @@
             margin-bottom: 0.15rem;
         }
 
+        .price-note {
+            display: block;
+            font-size: 0.68rem;
+            color: #8a8178;
+            letter-spacing: 0.4px;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        .delivery-note {
+            max-width: 780px;
+            margin: 0.6rem auto 0;
+            padding: 0.7rem 1.1rem;
+            border: 1px solid rgba(154,122,51,0.28);
+            border-radius: 6px;
+            font-size: 0.86rem;
+            line-height: 1.5;
+            color: #6f665c;
+            text-align: center;
+        }
+
         .product-price {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.9rem;
@@ -495,6 +516,7 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type":"Question","name":"¿Hacen envíos de flores a domicilio en Barranquilla el mismo día?","acceptedAnswer":{"@type":"Answer","text":"Sí. Si confirmas el pedido por WhatsApp dentro de nuestro horario, armamos el arreglo y lo entregamos a domicilio en Barranquilla el mismo día, en la dirección y la hora que nos indiques."}},
+        {"@type":"Question","name":"¿El precio del arreglo incluye el domicilio?","acceptedAnswer":{"@type":"Answer","text":"No. Los precios del catálogo corresponden únicamente al arreglo floral. El valor del domicilio se cotiza aparte según la zona de entrega en Barranquilla y se confirma por WhatsApp antes del despacho."}},
         {"@type":"Question","name":"¿Con qué flores trabajan los arreglos de este catálogo?","acceptedAnswer":{"@type":"Answer","text":"Este catálogo está armado con rosas y girasoles frescos, seleccionados el mismo día y acompañados de nube y follaje verde. Puedes pedir el arreglo solo con rosas, solo con girasoles o combinando ambas."}},
         {"@type":"Question","name":"¿Puedo enviar el arreglo como sorpresa sin estar presente?","acceptedAnswer":{"@type":"Answer","text":"Sí. Nos das la dirección, el nombre de quien recibe y el mensaje de la tarjeta, y nosotros hacemos la entrega. Te confirmamos con foto o mensaje cuando el arreglo ya fue recibido."}},
         {"@type":"Question","name":"¿A qué zonas de Barranquilla llevan las flores?","acceptedAnswer":{"@type":"Answer","text":"Cubrimos toda Barranquilla: Norte, El Prado, Alto Prado, Riomar, Villa Country, Centro, Boston, Ciudad Jardín, La Concepción, Los Nogales, Simón Bolívar y el área metropolitana cercana. Confírmanos la dirección por WhatsApp."}},
@@ -546,6 +568,7 @@
             <h2 class="section-title">Arreglos con Rosas y Girasoles</h2>
             <div class="gold-divider"></div>
             <p class="section-subtitle">Cada arreglo se arma a mano el día de la entrega con flores frescas. Elige el que más se parezca a lo que quieres decir y resérvalo directamente por WhatsApp.</p>
+            <p class="delivery-note"><strong>Importante:</strong> los precios corresponden únicamente al arreglo floral. <strong>El domicilio no está incluido</strong> y se cotiza aparte según la zona de entrega en Barranquilla.</p>
 
             <div class="filter-tabs">
                 <button class="filter-tab active" data-filter="todos">Todos</button>
@@ -671,6 +694,10 @@
                 <div class="faq-item">
                     <button class="faq-q" type="button">¿Hacen envíos de flores a domicilio el mismo día en Barranquilla?<span class="icon">+</span></button>
                     <div class="faq-a"><p>Sí. Si confirmas el pedido por WhatsApp dentro de nuestro horario, armamos el arreglo y lo entregamos a domicilio en Barranquilla el mismo día, en la dirección y a la hora que nos indiques.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" type="button">¿El precio del arreglo incluye el domicilio?<span class="icon">+</span></button>
+                    <div class="faq-a"><p>No. Los precios del catálogo corresponden solo al arreglo floral. El valor del domicilio se cotiza aparte según la zona de entrega en Barranquilla y te lo confirmamos por WhatsApp antes de despachar, junto con el total a pagar.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q" type="button">¿Con qué flores trabajan los arreglos de este catálogo?<span class="icon">+</span></button>
@@ -922,15 +949,15 @@
                 <div class="product-card">
                     <div class="product-image-container">
                         <img src="${product.image}" alt="${product.name} - Arreglo de flores a domicilio en Barranquilla" class="product-image" loading="lazy">
-                        <span class="discount-badge">Envío a Domicilio</span>
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">${product.name}</h3>
                         <div class="product-description">${product.description}</div>
                         <div class="product-footer">
                             <div>
-                                <span class="price-label">Precio</span>
+                                <span class="price-label">Precio del arreglo</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
+                                <span class="price-note">Domicilio no incluido · se cotiza según la zona</span>
                             </div>
                             <a href="https://wa.me/573019989093?text=Hola,%20me%20interesa%20el%20arreglo:%20${encodeURIComponent(product.name)}%20-%20${encodeURIComponent(formatPrice(product.price))}%20con%20env%C3%ADo%20a%20domicilio%20en%20Barranquilla"
                                class="btn-order"
@@ -1009,6 +1036,7 @@
                     <span class="promo-new-price">Arreglos desde $87.500</span>
                 </div>
                 <p class="promo-savings">Rosas · Girasoles · Entrega el mismo día</p>
+                <p style="font-size:.72rem;color:#8a8178;margin:-10px 0 14px;font-style:italic">Precio del arreglo. Domicilio no incluido, se cotiza según la zona.</p>
                 <a href="https://wa.me/573019989093?text=Hola,%20quiero%20un%20env%C3%ADo%20de%20flores%20a%20domicilio%20en%20Barranquilla%20hoy"
                    class="promo-flyer-btn"
                    target="_blank"

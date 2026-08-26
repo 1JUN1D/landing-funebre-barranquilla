@@ -353,6 +353,27 @@
             margin: 0.2rem 0 0.1rem;
         }
 
+        .price-note {
+            display: block;
+            font-size: 0.68rem;
+            color: rgba(245,240,232,0.55);
+            letter-spacing: 0.4px;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        .delivery-note {
+            max-width: 780px;
+            margin: 0.6rem auto 0;
+            padding: 0.7rem 1.1rem;
+            border: 1px solid rgba(198,164,92,0.28);
+            border-radius: 6px;
+            font-size: 0.86rem;
+            line-height: 1.5;
+            color: rgba(245,240,232,0.72);
+            text-align: center;
+        }
+
         .product-price {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.9rem;
@@ -633,6 +654,7 @@
       "mainEntity": [
         {"@type":"Question","name":"¿Qué tan rápido entregan una corona fúnebre en Barranquilla?","acceptedAnswer":{"@type":"Answer","text":"Al confirmar el pedido por WhatsApp, elaboramos y entregamos la corona o el ramo fúnebre en cuestión de horas, directo a la sala de velación, la iglesia o el cementerio en Barranquilla."}},
         {"@type":"Question","name":"¿Entregan el arreglo directamente en la funeraria o el cementerio?","acceptedAnswer":{"@type":"Answer","text":"Sí. Coordinamos con las funerarias y cementerios de Barranquilla. Solo requerimos la dirección, el nombre de la sala y la hora límite de entrega."}},
+        {"@type":"Question","name":"¿El precio del arreglo incluye la entrega?","acceptedAnswer":{"@type":"Answer","text":"No. Los precios del catálogo corresponden únicamente al arreglo floral. El valor de la entrega se cotiza aparte según el lugar del homenaje y se confirma por WhatsApp antes de elaborar la pieza."}},
         {"@type":"Question","name":"¿La cinta o banda se puede personalizar con el apellido?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas nuestras coronas incluyen banda personalizable con el apellido familiar, una frase de despedida o el nombre de la empresa en homenajes corporativos."}},
         {"@type":"Question","name":"¿Con qué flores se elaboran los arreglos para velación?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos crisantemos blancos pompón, rosas blancas y rojas, claveles, margaritas, orquídeas y nubes (gypsophila), acompañadas de follaje fresco seleccionado el mismo día."}}
       ]
@@ -682,6 +704,7 @@
             <h2 class="section-title">Catálogo de Homenajes Florales</h2>
             <div class="gold-divider"></div>
             <p class="section-subtitle">Coronas, corazones, cruces y pedestales elaborados a mano con flores frescas premium. Cada pieza muestra su precio anterior y su precio de homenaje vigente. Resérvala directamente por WhatsApp.</p>
+            <p class="delivery-note"><strong>Importante:</strong> los precios corresponden únicamente al arreglo floral. <strong>La entrega no está incluida</strong> y se cotiza aparte según el lugar del homenaje.</p>
 
             <div class="filter-tabs">
                 <button class="filter-tab active" data-filter="todos">Todos</button>
@@ -752,7 +775,6 @@
                             <li><strong>Flores premium del día:</strong> crisantemos, rosas, claveles, orquídeas y follaje fresco seleccionado</li>
                             <li><strong>Banda de condolencias personalizada:</strong> apellido, frase de despedida o cinta institucional</li>
                             <li><strong>Tarjeta de condolencias:</strong> un mensaje sentido que acompaña a la familia doliente</li>
-                            <li><strong>Entrega prioritaria:</strong> a funerarias, salas de velación, iglesias y cementerios de Barranquilla</li>
                             <li><strong>Coordinación discreta:</strong> gestionamos todo por WhatsApp sin molestar a la familia</li>
                         </ul>
                     </div>
@@ -831,6 +853,13 @@
                 <div class="faq-question">¿Entregan el arreglo directamente en la funeraria o el cementerio?</div>
                 <div class="faq-answer">
                     Sí. Coordinamos con las funerarias y cementerios de Barranquilla. Solo necesitamos la dirección, el nombre de la sala o capilla y la hora límite para programar el despacho.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿El precio del arreglo incluye la entrega?</div>
+                <div class="faq-answer">
+                    No. Los precios del catálogo corresponden únicamente al arreglo floral. El valor de la entrega se cotiza aparte según el lugar del homenaje (sala de velación, iglesia, cementerio o residencia) y te lo confirmamos por WhatsApp junto con el total antes de elaborar la pieza.
                 </div>
             </div>
 
@@ -1163,6 +1192,7 @@
                                 <span class="price-old">Antes ${formatPrice(product.oldPrice)}</span>
                                 <span class="price-label">Precio Homenaje</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
+                                <span class="price-note">Entrega no incluida · se cotiza según el lugar</span>
                             </div>
                             <a href="https://wa.me/573019989093?text=Hola,%20me%20interesa%20el%20arreglo%20f%C3%BAnebre:%20${encodeURIComponent(product.name)}%20-%20${encodeURIComponent(formatPrice(product.price))}"
                                class="btn-order"
