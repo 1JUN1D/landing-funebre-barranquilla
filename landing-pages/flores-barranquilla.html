@@ -469,8 +469,210 @@
         .whatsapp-float:hover { transform: scale(1.1); }
         .whatsapp-float svg { width: 32px; height: 32px; }
 
+        /* =================== TEMPORADA: AMOR Y AMISTAD + FLORES AMARILLAS =================== */
+        .season-section {
+            position: relative;
+            padding: 64px 20px 40px;
+            background:
+                radial-gradient(ellipse at 15% 10%, rgba(217,98,138,0.18) 0%, transparent 45%),
+                radial-gradient(ellipse at 85% 90%, rgba(242,201,76,0.22) 0%, transparent 45%),
+                linear-gradient(180deg, #FFF3F6 0%, var(--crema) 100%);
+            border-bottom: 1px solid rgba(201,162,75,0.28);
+            overflow: hidden;
+        }
+        .season-section::before, .season-section::after {
+            content: '❤';
+            position: absolute;
+            font-size: 11rem;
+            line-height: 1;
+            color: rgba(217,98,138,0.07);
+            pointer-events: none;
+            user-select: none;
+        }
+        .season-section::before { top: -30px; left: -20px; transform: rotate(-18deg); }
+        .season-section::after { bottom: -40px; right: -10px; transform: rotate(14deg); }
+
+        .season-head { text-align: center; position: relative; z-index: 1; }
+
+        .season-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: linear-gradient(135deg, var(--vino) 0%, var(--rosa) 100%);
+            color: #FFF;
+            font-size: 0.74rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0.5rem 1.3rem;
+            border-radius: 40px;
+            box-shadow: 0 8px 22px rgba(142,47,76,0.28);
+            margin-bottom: 1.2rem;
+        }
+
+        .season-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--texto);
+        }
+        .season-title em { font-style: italic; color: var(--vino); }
+
+        .season-subtitle {
+            max-width: 720px;
+            margin: 0.9rem auto 0;
+            color: var(--texto-suave);
+            font-weight: 300;
+            font-size: 1.05rem;
+        }
+
+        /* --- contador --- */
+        .countdown-card {
+            position: relative; z-index: 1;
+            max-width: 720px;
+            margin: 2.2rem auto 0;
+            background: rgba(255,255,255,0.86);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(201,162,75,0.45);
+            border-radius: 8px;
+            padding: 1.6rem 1.5rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 18px 50px rgba(142,47,76,0.10);
+        }
+        .countdown-card::before {
+            content: '';
+            position: absolute; inset: 6px;
+            border: 1px dashed rgba(201,162,75,0.5);
+            border-radius: 5px;
+            pointer-events: none;
+        }
+        .countdown-label {
+            font-size: 0.74rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--oro-oscuro);
+            margin-bottom: 1rem;
+        }
+        .countdown-label strong { color: var(--vino); font-weight: 600; }
+
+        .countdown {
+            display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;
+        }
+        .countdown-unit {
+            min-width: 88px;
+            padding: 0.85rem 0.6rem 0.7rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--rosa-suave) 100%);
+            border: 1px solid rgba(217,98,138,0.35);
+            border-radius: 6px;
+        }
+        .countdown-num {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--vino);
+            font-variant-numeric: tabular-nums;
+        }
+        .countdown-txt {
+            display: block;
+            margin-top: 0.35rem;
+            font-size: 0.66rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--texto-suave);
+        }
+        .countdown-today {
+            display: none;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: var(--vino);
+            line-height: 1.2;
+        }
+        .countdown-card.is-today .countdown, .countdown-card.is-today .countdown-label { display: none; }
+        .countdown-card.is-today .countdown-today { display: block; }
+        .countdown-card.is-over { display: none; }
+        .countdown-note {
+            margin-top: 1rem;
+            font-size: 0.82rem;
+            color: var(--texto-suave);
+            font-weight: 300;
+        }
+
+        /* --- bloques de productos de temporada --- */
+        .season-block { position: relative; z-index: 1; margin-top: 3.4rem; }
+        .season-block + .season-block { margin-top: 4.2rem; padding-top: 3.4rem; border-top: 1px solid rgba(201,162,75,0.3); }
+
+        .season-block-head {
+            display: flex; align-items: center; gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .season-block-head::before, .season-block-head::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent, var(--oro)), transparent);
+            min-width: 40px;
+        }
+        .season-block-title {
+            text-align: center;
+        }
+        .season-block-title h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--accent, var(--vino));
+            line-height: 1.15;
+        }
+        .season-block-title span {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--oro-oscuro);
+            margin-top: 0.25rem;
+        }
+        .season-block-desc {
+            text-align: center;
+            max-width: 680px;
+            margin: 1rem auto 0;
+            color: var(--texto-suave);
+            font-weight: 300;
+            font-size: 0.98rem;
+        }
+
+        .season-block.amor { --accent: #8E2F4C; }
+        .season-block.amarillas { --accent: #B8860B; }
+
+        .season-block .products-grid { margin-top: 2.2rem; }
+        .season-block.amor .product-card { border-color: rgba(142,47,76,0.28); }
+        .season-block.amarillas .product-card { border-color: rgba(184,134,11,0.35); }
+        .season-block.amarillas .product-name { color: #9A7A33; }
+
+        .season-tag {
+            position: absolute; top: 14px; left: 14px;
+            font-size: 0.66rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0.4rem 0.85rem;
+            border-radius: 2px;
+            backdrop-filter: blur(4px);
+        }
+        .season-tag.amor { background: rgba(142,47,76,0.92); color: #FFF; }
+        .season-tag.amarillas { background: rgba(242,201,76,0.95); color: #5a4410; }
+
         /* =================== RESPONSIVE =================== */
         @media (max-width: 768px) {
+            .season-section { padding: 50px 18px 30px; }
+            .season-title { font-size: 2.1rem; }
+            .season-section::before, .season-section::after { font-size: 7rem; }
+            .season-badge { font-size: 0.66rem; letter-spacing: 2px; padding: 0.45rem 1rem; }
+            .countdown { gap: 0.5rem; flex-wrap: nowrap; }
+            .countdown-unit { flex: 1; min-width: 0; padding: 0.7rem 0.25rem 0.55rem; }
+            .countdown-card { padding: 1.4rem 1rem 1.3rem; }
+            .countdown-txt { font-size: 0.58rem; letter-spacing: 1px; }
+            .countdown-num { font-size: 2rem; }
+            .countdown-today { font-size: 1.5rem; }
+            .season-block-title h3 { font-size: 1.8rem; }
             .hero { padding: 60px 18px 46px; }
             .hero h1 { font-size: 2.2rem; }
             .hero .subtitle { font-size: 1.2rem; }
@@ -504,9 +706,9 @@
       "makesOffer": {
         "@type": "AggregateOffer",
         "priceCurrency": "COP",
-        "lowPrice": "105000",
+        "lowPrice": "44000",
         "highPrice": "570000",
-        "offerCount": "30"
+        "offerCount": "48"
       }
     }
     </script>
@@ -560,6 +762,57 @@
     <div class="promo-ribbon">
         ✦ Envíos de flores a domicilio en toda Barranquilla · Pide hoy y entregamos hoy ✦
     </div>
+
+    <!-- ==== TEMPORADA: AMOR Y AMISTAD + FLORES AMARILLAS ==== -->
+    <section class="season-section" id="temporada">
+        <div class="container">
+            <div class="season-head">
+                <span class="season-badge">✦ Temporada especial · Septiembre ✦</span>
+                <h2 class="season-title">Amor y Amistad y <em>Flores Amarillas</em> en Barranquilla</h2>
+                <p class="season-subtitle">Septiembre trae las dos fechas en las que más flores se regalan en el año. Armamos estos arreglos especialmente para la temporada y los entregamos a domicilio el mismo día en toda Barranquilla.</p>
+            </div>
+
+            <div class="countdown-card" id="countdown-card" aria-live="polite">
+                <p class="countdown-label">Faltan para <strong>Amor y Amistad</strong> · Sábado 19 de septiembre</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-unit"><span class="countdown-num" id="cd-days">0</span><span class="countdown-txt">Días</span></div>
+                    <div class="countdown-unit"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-txt">Horas</span></div>
+                    <div class="countdown-unit"><span class="countdown-num" id="cd-mins">00</span><span class="countdown-txt">Minutos</span></div>
+                    <div class="countdown-unit"><span class="countdown-num" id="cd-secs">00</span><span class="countdown-txt">Segundos</span></div>
+                </div>
+                <p class="countdown-today">❤ ¡Hoy es Amor y Amistad! Pide ahora y entregamos hoy mismo.</p>
+                <p class="countdown-note">Reserva tu arreglo por WhatsApp con anticipación y asegura la entrega el día exacto.</p>
+            </div>
+
+            <!-- Bloque Amor y Amistad -->
+            <div class="season-block amor">
+                <div class="season-block-head">
+                    <div class="season-block-title">
+                        <h3>❤ Arreglos de Amor y Amistad</h3>
+                        <span>Sábado 19 de septiembre</span>
+                    </div>
+                </div>
+                <p class="season-block-desc">Rosas rojas para la pareja y rosas rosadas para las amigas, el amigo secreto o la persona que siempre está. Todos se arman el día de la entrega.</p>
+                <div class="products-grid" id="amor-grid">
+                    <!-- Los productos se generan con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Bloque Flores Amarillas -->
+            <div class="season-block amarillas">
+                <div class="season-block-head">
+                    <div class="season-block-title">
+                        <h3>🌻 Flores Amarillas</h3>
+                        <span>Tradición del 21 de septiembre</span>
+                    </div>
+                </div>
+                <p class="season-block-desc">Girasoles y solidago amarillo para cumplir la tradición que llena Barranquilla de amarillo cada 21 de septiembre. Hay opciones desde $44.000 para que nadie se quede sin su detalle.</p>
+                <div class="products-grid" id="amarillas-grid">
+                    <!-- Los productos se generan con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Catálogo -->
     <section class="products-section" id="1">
@@ -935,20 +1188,115 @@
             }
         ];
 
+        // ==== Temporada: Amor y Amistad (19 de septiembre) ====
+        const amorProducts = [
+            {
+                id: 56, name: "Pacto de Amistad", price: 69000, image: "/assets/foto56.webp",
+                description: "Rosas rojas con nube blanca en papel negro de bordes dorados. Sobrio y directo, funciona igual para la pareja que para el mejor amigo. El regalo seguro de Amor y Amistad cuando no quieres arriesgarte.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 61, name: "Cariño Sincero", price: 100000, image: "/assets/foto61.webp",
+                description: "Rosas rosadas con nube blanca en papel blanco de bordes dorados y moño rosa. Dice cariño sin decir romance, por eso es el que más se regala entre amigas. Para un amigo secreto que quieres que se note.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 63, name: "Jardín de Amigas", price: 106000, image: "/assets/foto63.webp",
+                description: "Rosas rosadas repartidas entre helechos y follaje verde, en papel blanco y rosa. Se ve fresco y natural, como recién armado en el jardín. Para una amiga de toda la vida.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 66, name: "Detalle Perfecto", price: 106000, image: "/assets/foto66.webp",
+                description: "Rosas rosadas armadas en cúpula, en papel rosa con cinta dorada. Sencillo, femenino y muy elegante. El regalo ideal de amigo secreto cuando quieres quedar bien de verdad.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 64, name: "Dulce Compañía", price: 125000, image: "/assets/foto64.webp",
+                description: "Rosas rosadas en ramo redondo y compacto, en papel rosa con bordes dorados y moño de satín. Es tierno de principio a fin. Para quien te acompaña en las buenas y en las malas.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 65, name: "Amistad Eterna", price: 125000, image: "/assets/foto65.webp",
+                description: "Rosas en tonos rosa y coral con nube blanca, envueltas en papel crema. Un ramo cálido y generoso que se ve bien en cualquier mesa. Para agradecer una amistad que no falla.",
+                categories: ["amor", "rosas"]
+            },
+            {
+                id: 62, name: "Abrazo Rosa", price: 213000, image: "/assets/foto62.webp",
+                description: "Rosas rosadas en gran cantidad con pequeños toques de solidago, en papel blanco con detalles dorados y cinta rosa. Voluminoso, delicado y elegante. Para la amistad que ya es familia.",
+                categories: ["amor", "rosas", "premium"]
+            },
+            {
+                id: 67, name: "Amor en Grande", price: 288000, image: "/assets/foto67.webp",
+                description: "Rosas rojas en gran volumen formando una cúpula perfecta, en papel blanco con cinta roja. Llega y llena la habitación. Para la persona a la que le quieres decir todo este 19 de septiembre.",
+                categories: ["amor", "rosas", "premium"]
+            },
+            {
+                id: 68, name: "Pasión de Medianoche", price: 288000, image: "/assets/foto68.webp",
+                description: "Rosas rojas en gran cantidad sobre papel negro con bordes dorados. El contraste hace que el rojo se vea todavía más intenso. Un regalo de pareja que impone y no se olvida.",
+                categories: ["amor", "rosas", "premium"]
+            },
+            {
+                id: 71, name: "Declaración Total", price: 313000, image: "/assets/foto71.webp",
+                description: "Rosas rojas en cúpula compacta rodeadas de nube blanca, en papel negro translúcido con bordes dorados. Es el ramo que se entrega en la puerta y se recuerda por años. Para decir te amo sin margen de error.",
+                categories: ["amor", "rosas", "premium"]
+            },
+            {
+                id: 69, name: "Para Toda la Vida", price: 338000, image: "/assets/foto69.webp",
+                description: "Rosas rojas abundantes con helechos verdes, envueltas en papel blanco y moño rojo. Clásico, imponente y fresco. Para un Amor y Amistad que se celebra en serio.",
+                categories: ["amor", "rosas", "premium"]
+            }
+        ];
+
+        // ==== Temporada: Flores Amarillas (21 de septiembre) ====
+        const amarillasProducts = [
+            {
+                id: 55, name: "Primer Rayo", price: 44000, image: "/assets/foto55.webp",
+                description: "Tres rosas rojas entre solidago amarillo abundante, en papel blanco con moño fucsia. Cumple la tradición del 21 sin gastar de más: pequeño, luminoso y con una rosa que dice más que un simple feliz día.",
+                categories: ["amarillas", "rosas"]
+            },
+            {
+                id: 57, name: "Sol y Rosa", price: 44000, image: "/assets/foto57.webp",
+                description: "Un girasol abierto junto a una rosa roja, con solidago y astromelias amarillas sobre papel kraft. Reúne en un solo ramo la flor amarilla de la tradición y la rosa que dice lo demás. Para llegar el 21 con el regalo correcto.",
+                categories: ["amarillas", "girasoles", "rosas"]
+            },
+            {
+                id: 70, name: "Tres Soles", price: 69000, image: "/assets/foto70.webp",
+                description: "Tres girasoles abiertos con nube blanca sobre papel negro y moño rojo. El contraste hace que el amarillo se vea el doble. El ramo clásico del 21 de septiembre, listo para entregar.",
+                categories: ["amarillas", "girasoles"]
+            },
+            {
+                id: 58, name: "Tarde Dorada", price: 75000, image: "/assets/foto58.webp",
+                description: "Rosas rosadas y claveles con solidago amarillo y verde fresco, envueltos en papel rosa con moño al tono. Es dulce, alegre y muy fotografiable. Para una amiga, una hermana o mamá en la semana de las flores amarillas.",
+                categories: ["amarillas", "rosas"]
+            },
+            {
+                id: 72, name: "Campo Abierto", price: 75000, image: "/assets/foto72.webp",
+                description: "Girasoles, solidago amarillo y rosas blancas con follaje verde, en papel negro con bordes amarillos. Parece recién cortado del campo. Para quien prefiere lo natural sobre lo formal.",
+                categories: ["amarillas", "girasoles", "rosas"]
+            },
+            {
+                id: 59, name: "Seis Razones", price: 94000, image: "/assets/foto59.webp",
+                description: "Seis rosas rojas entre solidago amarillo y nube blanca, en papel blanco con moño rojo. Combina el amarillo que trae suerte con el rojo que trae amor. Para quien merece las dos cosas.",
+                categories: ["amarillas", "rosas"]
+            },
+            {
+                id: 60, name: "Sol de Mediodía", price: 150000, image: "/assets/foto60.webp",
+                description: "Rosas rojas coronadas por un girasol grande, solidago amarillo y follaje, en papel blanco con bordes dorados y moño rojo. Se ve grande desde la puerta. Para una fecha en la que no quieres pasar desapercibido.",
+                categories: ["amarillas", "girasoles", "rosas", "premium"]
+            }
+        ];
+
         function formatPrice(price) {
             return '$' + price.toLocaleString('es-CO');
         }
 
-        function renderProducts(filter = 'todos') {
-            const grid = document.getElementById('products-grid');
-            let filtered = products;
-            if (filter !== 'todos') {
-                filtered = products.filter(p => p.categories.includes(filter));
-            }
-            grid.innerHTML = filtered.map(product => `
+        function productCard(product, tag) {
+            const tagHtml = tag ? `<span class="season-tag ${tag.cls}">${tag.text}</span>` : '';
+            return `
                 <div class="product-card">
                     <div class="product-image-container">
                         <img src="${product.image}" alt="${product.name} - Arreglo de flores a domicilio en Barranquilla" class="product-image" loading="lazy">
+                        ${tagHtml}
                     </div>
                     <div class="product-info">
                         <h3 class="product-name">${product.name}</h3>
@@ -971,7 +1319,48 @@
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `;
+        }
+
+        function renderSeason() {
+            const amorGrid = document.getElementById('amor-grid');
+            const amarillasGrid = document.getElementById('amarillas-grid');
+            if (amorGrid) amorGrid.innerHTML = amorProducts.map(p => productCard(p, { cls: 'amor', text: '❤ Amor y Amistad' })).join('');
+            if (amarillasGrid) amarillasGrid.innerHTML = amarillasProducts.map(p => productCard(p, { cls: 'amarillas', text: '🌻 21 de Septiembre' })).join('');
+        }
+
+        // ==== Contador Amor y Amistad ====
+        // Cuenta hasta el sábado 19 de septiembre (hora Colombia). Ese día muestra "¡Es hoy!"
+        // y desde el día siguiente el contador se oculta; los bloques de productos siguen visibles.
+        const AMOR_TARGET = new Date('2026-09-19T00:00:00-05:00');
+        const AMOR_END    = new Date('2026-09-20T00:00:00-05:00');
+
+        function pad(n) { return String(n).padStart(2, '0'); }
+
+        function updateCountdown() {
+            const card = document.getElementById('countdown-card');
+            if (!card) return;
+            const now = new Date();
+            if (now >= AMOR_END) { card.classList.add('is-over'); return; }
+            if (now >= AMOR_TARGET) { card.classList.add('is-today'); return; }
+            let diff = Math.floor((AMOR_TARGET - now) / 1000);
+            const d = Math.floor(diff / 86400); diff -= d * 86400;
+            const h = Math.floor(diff / 3600);  diff -= h * 3600;
+            const m = Math.floor(diff / 60);
+            const s = diff - m * 60;
+            document.getElementById('cd-days').textContent  = d;
+            document.getElementById('cd-hours').textContent = pad(h);
+            document.getElementById('cd-mins').textContent  = pad(m);
+            document.getElementById('cd-secs').textContent  = pad(s);
+        }
+
+        function renderProducts(filter = 'todos') {
+            const grid = document.getElementById('products-grid');
+            let filtered = products;
+            if (filter !== 'todos') {
+                filtered = products.filter(p => p.categories.includes(filter));
+            }
+            grid.innerHTML = filtered.map(p => productCard(p)).join('');
         }
 
         document.querySelectorAll('.filter-tab').forEach(btn => {
@@ -1014,6 +1403,9 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            renderSeason();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
             renderProducts();
             aplicarSitelink();
         });
