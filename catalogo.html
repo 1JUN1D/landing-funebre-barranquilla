@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Floristería Las Hadas | Ramos y Bouquets en Barranquilla, Colombia</title>
+    <meta name="description"
+        content="Catálogo de Floristería Las Hadas en Barranquilla, Colombia: ramos de rosas, girasoles, arreglos de rosas y girasoles, canastas y arreglos premium. Envío a domicilio.">
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+    <!-- Google Ads (Floristería Las Hadas) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17881122637"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17881122637');
+    </script>
+
+    <!-- FUNCIÓN DE TRACKING WHATSAPP PARA GOOGLE ADS -->
+    <script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            // Registra la conversión y abre WhatsApp en el mismo clic
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { 'send_to': 'AW-17881122637/CCIXCOr22dEcEM2Osc5C' });
+                }
+            } catch (error) {
+                console.error('Error en tracking:', error);
+            }
+            window.open(whatsappUrl, '_blank');
+            return false;
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo"><img src="assets/logo.webp" alt="Floristería Las Hadas"></div>
+            <h1 class="wordmark">LAS HADAS<small>FLORISTERÍA</small></h1>
+            <p>Ramos de rosas y girasoles con envío a domicilio en Barranquilla, Colombia</p>
+            <p>Los precios corresponden solo al arreglo floral; el domicilio se cotiza aparte según la zona.</p>
+        </div>
+    </header>
+
+    <!-- Navegación de secciones -->
+    <nav class="section-nav" aria-label="Secciones del catálogo">
+        <div class="container">
+            <a href="#rosas" data-section="rosas">🌹 Ramos de Rosas</a>
+            <a href="#girasoles" data-section="girasoles">🌻 Girasoles</a>
+            <a href="#premium" data-section="premium">👑 Premium</a>
+        </div>
+    </nav>
+
+    <!-- Búsqueda y filtros -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Buscar por número, nombre o flor (ej: 42, girasoles, canasta)">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <button class="search-clear" id="search-clear" type="button" aria-label="Limpiar búsqueda">&times;</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Todos</button>
+                <button class="filter-btn" data-category="rosas">Rosas</button>
+                <button class="filter-btn" data-category="girasoles">Girasoles</button>
+                <button class="filter-btn" data-category="mixtos">Rosas y Girasoles</button>
+                <button class="filter-btn" data-category="canastas">Canastas</button>
+                <button class="filter-btn" data-category="premium">Premium</button>
+                <button class="filter-btn" data-category="precio-bajo">Hasta $100.000</button>
+                <button class="filter-btn" data-category="precio-medio">$100.000 – $250.000</button>
+                <button class="filter-btn" data-category="precio-alto">Más de $250.000</button>
+            </div>
+            <div class="results-counter">Mostrando <strong id="results-count">0</strong> productos</div>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <main class="catalog">
+        <div class="container">
+            <div class="empty-state" id="empty-state" style="display:none;">
+                <h3>No se encontraron productos</h3>
+                <p>Prueba con otro filtro o con otra palabra de búsqueda</p>
+            </div>
+
+            <section class="seccion" id="rosas" data-section="rosas">
+                <div class="seccion-head">
+                    <h2>🌹 Ramos de Rosas</h2>
+                    <span class="ln"></span>
+                </div>
+                <p class="seccion-sub">Rosas rojas, rosadas y blancas en ramos de todos los tamaños</p>
+                <div class="products-grid">
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-bajo" data-number="55" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto55.webp" alt="Primer Rayo - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 55</span>
+                        <span class="product-price">$44.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Primer Rayo</h3>
+                        <p class="product-description">Tres rosas rojas entre solidago amarillo abundante, en papel blanco con moño fucsia. Pequeño, luminoso y sin gastar de más, con una rosa que dice más que un simple feliz día.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Primer Rayo (Nº 55) por $44.000. ¿Podrías darme más información?', 'primer_rayo')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-bajo" data-number="56" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto56.webp" alt="Pacto de Amistad - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 56</span>
+                        <span class="product-price">$69.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Pacto de Amistad</h3>
+                        <p class="product-description">Rosas rojas con nube blanca en papel negro de bordes dorados. Sobrio y directo, funciona igual para la pareja que para el mejor amigo. El regalo seguro cuando no quieres arriesgarte.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Pacto de Amistad (Nº 56) por $69.000. ¿Podrías darme más información?', 'pacto_de_amistad')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-bajo" data-number="58" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto58.webp" alt="Tarde Dorada - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 58</span>
+                        <span class="product-price">$75.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tarde Dorada</h3>
+                        <p class="product-description">Rosas rosadas y claveles con solidago amarillo y verde fresco, envueltos en papel rosa con moño al tono. Es dulce, alegre y muy fotografiable. Para una amiga, una hermana o mamá.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Tarde Dorada (Nº 58) por $75.000. ¿Podrías darme más información?', 'tarde_dorada')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-bajo" data-number="59" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto59.webp" alt="Seis Razones - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 59</span>
+                        <span class="product-price">$94.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Seis Razones</h3>
+                        <p class="product-description">Seis rosas rojas entre solidago amarillo y nube blanca, en papel blanco con moño rojo. Combina el amarillo que trae suerte con el rojo que trae amor. Para quien merece las dos cosas.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Seis Razones (Nº 59) por $94.000. ¿Podrías darme más información?', 'seis_razones')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-bajo" data-number="61" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto61.webp" alt="Cariño Sincero - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 61</span>
+                        <span class="product-price">$100.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cariño Sincero</h3>
+                        <p class="product-description">Rosas rosadas con nube blanca en papel blanco de bordes dorados y moño rosa. Dice cariño sin decir romance, por eso es el que más se regala entre amigas. Para un amigo secreto que quieres que se note.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Cariño Sincero (Nº 61) por $100.000. ¿Podrías darme más información?', 'carino_sincero')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="27" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto27.webp" alt="Declaración Sin Palabras - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 27</span>
+                        <span class="product-price">$105.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Declaración Sin Palabras</h3>
+                        <p class="product-description">Rosas rojas en ramo vertical con solidago amarillo y nube, envueltas en papel kraft y rematadas con un moño rojo de corazones. Es directo, clásico y no deja lugar a dudas. Para cuando quieres que quede claro lo que sientes.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Declaración Sin Palabras (Nº 27) por $105.000. ¿Podrías darme más información?', 'declaracion_sin_palabras')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="63" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto63.webp" alt="Jardín de Amigas - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 63</span>
+                        <span class="product-price">$106.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Jardín de Amigas</h3>
+                        <p class="product-description">Rosas rosadas repartidas entre helechos y follaje verde, en papel blanco y rosa. Se ve fresco y natural, como recién armado en el jardín. Para una amiga de toda la vida.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Jardín de Amigas (Nº 63) por $106.000. ¿Podrías darme más información?', 'jardin_de_amigas')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="66" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto66.webp" alt="Detalle Perfecto - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 66</span>
+                        <span class="product-price">$106.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Detalle Perfecto</h3>
+                        <p class="product-description">Rosas rosadas armadas en cúpula, en papel rosa con cinta dorada. Sencillo, femenino y muy elegante. El regalo ideal de amigo secreto cuando quieres quedar bien de verdad.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Detalle Perfecto (Nº 66) por $106.000. ¿Podrías darme más información?', 'detalle_perfecto')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="31" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto31.webp" alt="Ternura de Primavera - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 31</span>
+                        <span class="product-price">$120.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Ternura de Primavera</h3>
+                        <p class="product-description">Rosas en rosado, crema y fucsia con nube y flores blancas de campo, envueltas en papel blanco suave. Transmite delicadeza sin ser empalagoso. El indicado para mamá, para una amiga o para el primer detalle de algo que empieza.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Ternura de Primavera (Nº 31) por $120.000. ¿Podrías darme más información?', 'ternura_de_primavera')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="64" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto64.webp" alt="Dulce Compañía - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 64</span>
+                        <span class="product-price">$125.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Dulce Compañía</h3>
+                        <p class="product-description">Rosas rosadas en ramo redondo y compacto, en papel rosa con bordes dorados y moño de satín. Es tierno de principio a fin. Para quien te acompaña en las buenas y en las malas.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Dulce Compañía (Nº 64) por $125.000. ¿Podrías darme más información?', 'dulce_compania')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="65" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto65.webp" alt="Amistad Eterna - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 65</span>
+                        <span class="product-price">$125.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Amistad Eterna</h3>
+                        <p class="product-description">Rosas en tonos rosa y coral con nube blanca, envueltas en papel crema. Un ramo cálido y generoso que se ve bien en cualquier mesa. Para agradecer una amistad que no falla.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Amistad Eterna (Nº 65) por $125.000. ¿Podrías darme más información?', 'amistad_eterna')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="29" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto29.webp" alt="Todo por Ti - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 29</span>
+                        <span class="product-price">$135.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Todo por Ti</h3>
+                        <p class="product-description">Rosas rojas apretadas en forma redonda con destellos de nube blanca, envueltas en papel blanco con filos dorados. Compacto, elegante y sin adornos innecesarios. El detalle perfecto para un aniversario o una reconciliación.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Todo por Ti (Nº 29) por $135.000. ¿Podrías darme más información?', 'todo_por_ti')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="33" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto33.webp" alt="Cielo y Fuego - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 33</span>
+                        <span class="product-price">$150.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cielo y Fuego</h3>
+                        <p class="product-description">Margaritas blancas de centro verde con rosas rojas asomando entre ellas, envueltas en papel azul petróleo. Fresco, distinto y nada predecible. Para quien ya recibió ramos y merece algo que no haya visto antes.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Cielo y Fuego (Nº 33) por $150.000. ¿Podrías darme más información?', 'cielo_y_fuego')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="34" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto34.webp" alt="Amor Clásico - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 34</span>
+                        <span class="product-price">$195.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Amor Clásico</h3>
+                        <p class="product-description">Rosas rojas en ramo vertical con follaje verde, envueltas en papel rojo y blanco con filo dorado y moño de satín. Es la imagen que todo el mundo tiene en la cabeza cuando piensa en regalar flores. Nunca falla en un aniversario.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Amor Clásico (Nº 34) por $195.000. ¿Podrías darme más información?', 'amor_clasico')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="40" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto40.webp" alt="Primer Amor - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 40</span>
+                        <span class="product-price">$203.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Primer Amor</h3>
+                        <p class="product-description">Rosas rosadas y crema entre margaritas blancas y nube, envueltas en papel rosado con cintas al vuelo. Fresco, joven y luminoso. Para un cumpleaños, un aniversario de noviazgo o un detalle de esos que empiezan algo.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Primer Amor (Nº 40) por $203.000. ¿Podrías darme más información?', 'primer_amor')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="38" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto38.webp" alt="Noche de Terciopelo - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 38</span>
+                        <span class="product-price">$210.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Noche de Terciopelo</h3>
+                        <p class="product-description">Rosas rojas de tallo largo envueltas en capas de papel negro translúcido. El negro hace que el rojo se vea más profundo y más costoso. Para una cena importante, una propuesta o una noche que quieres que recuerde.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Noche de Terciopelo (Nº 38) por $210.000. ¿Podrías darme más información?', 'noche_de_terciopelo')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="32" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto32.webp" alt="Dulce Confesión - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 32</span>
+                        <span class="product-price">$218.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Dulce Confesión</h3>
+                        <p class="product-description">Rosas fucsia, rosadas y blancas mezcladas con abundante nube, sobre papel blanco con bordes dorados y cinta rosada. Es el arreglo que se ve alegre y romántico al mismo tiempo. Para cumpleaños y para decir lo que aún no te has atrevido.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Dulce Confesión (Nº 32) por $218.000. ¿Podrías darme más información?', 'dulce_confesion')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="30" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto30.webp" alt="Pasión y Pureza - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 30</span>
+                        <span class="product-price">$225.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Pasión y Pureza</h3>
+                        <p class="product-description">Rosas rojas y blancas alternadas en un ramo redondo, envueltas en papel negro con cinta vinotinto. El contraste dice dos cosas a la vez: deseo y respeto. Para relaciones que ya tienen historia y quieren celebrarla.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Pasión y Pureza (Nº 30) por $225.000. ¿Podrías darme más información?', 'pasion_y_pureza')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="41" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto41.webp" alt="Jardín de Ella - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 41</span>
+                        <span class="product-price">$225.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Jardín de Ella</h3>
+                        <p class="product-description">Rosas rojas y rosadas mezcladas con claveles, lirios blancos, eucalipto y nube, sobre papel rosado con cinta vinotinto. Se ve abundante y hecho a mano, como un jardín recogido esa misma mañana. Perfecto para mamá o para una fecha grande.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Jardín de Ella (Nº 41) por $225.000. ¿Podrías darme más información?', 'jardin_de_ella')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-medio" data-number="48" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto48.webp" alt="Contraste Perfecto - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 48</span>
+                        <span class="product-price">$240.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Contraste Perfecto</h3>
+                        <p class="product-description">Rosas rojas y rosadas alternadas con hojas de eucalipto, envueltas en papel blanco mate con cinta rosada. Sobrio, limpio y de muy buen gusto. Para alguien de estilo refinado que valora los detalles bien hechos.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Contraste Perfecto (Nº 48) por $240.000. ¿Podrías darme más información?', 'contraste_perfecto')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-alto" data-number="50" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto50.webp" alt="Amanecer en Rosa - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 50</span>
+                        <span class="product-price">$270.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Amanecer en Rosa</h3>
+                        <p class="product-description">Rosas rosadas y blancas mezcladas en ramo redondo, envueltas en papel blanco con líneas doradas y cinta al tono. Delicado sin ser tímido, elegante sin esfuerzo. Para mamá, para una amiga o para agradecer de verdad.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Amanecer en Rosa (Nº 50) por $270.000. ¿Podrías darme más información?', 'amanecer_en_rosa')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-alto" data-number="39" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto39.webp" alt="Dos Almas - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 39</span>
+                        <span class="product-price">$285.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Dos Almas</h3>
+                        <p class="product-description">Rosas blancas al centro y rosas rojas alrededor, con nube en el borde y papel negro de fondo. Cuenta una historia de dos partes que se completan. Un regalo de aniversario que se ve pensado, no comprado a la carrera.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Dos Almas (Nº 39) por $285.000. ¿Podrías darme más información?', 'dos_almas')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="rosas" data-tags="rosas precio-alto" data-number="35" data-keywords="rosas">
+                    <div class="product-image">
+                        <img src="assets/foto35.webp" alt="Nube Rosada - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 35</span>
+                        <span class="product-price">$300.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Nube Rosada</h3>
+                        <p class="product-description">Rosas rosadas abiertas y compactas, envueltas en papel color crema con textura y cinta de satín rosado. Suave, generoso y visualmente impecable. Para cumpleaños, para un nacimiento o para agradecerle algo grande a alguien.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Nube Rosada (Nº 35) por $300.000. ¿Podrías darme más información?', 'nube_rosada')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="seccion" id="girasoles" data-section="girasoles">
+                <div class="seccion-head">
+                    <h2>🌻 Girasoles</h2>
+                    <span class="ln"></span>
+                </div>
+                <p class="seccion-sub">Girasoles solos o combinados con rosas, para alegrar cualquier día</p>
+                <div class="products-grid">
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-bajo" data-number="57" data-keywords="girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto57.webp" alt="Sol y Rosa - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 57</span>
+                        <span class="product-price">$44.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sol y Rosa</h3>
+                        <p class="product-description">Un girasol abierto junto a una rosa roja, con solidago y astromelias amarillas sobre papel kraft. Reúne en un solo ramo la alegría del amarillo y la rosa que dice lo demás.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Sol y Rosa (Nº 57) por $44.000. ¿Podrías darme más información?', 'sol_y_rosa')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="girasoles precio-bajo" data-number="70" data-keywords="girasoles">
+                    <div class="product-image">
+                        <img src="assets/foto70.webp" alt="Tres Soles - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 70</span>
+                        <span class="product-price">$69.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tres Soles</h3>
+                        <p class="product-description">Tres girasoles abiertos con nube blanca sobre papel negro y moño rojo. El contraste hace que el amarillo se vea el doble. Un clásico de girasoles, listo para entregar.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Tres Soles (Nº 70) por $69.000. ¿Podrías darme más información?', 'tres_soles')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-bajo" data-number="72" data-keywords="girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto72.webp" alt="Campo Abierto - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 72</span>
+                        <span class="product-price">$75.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Campo Abierto</h3>
+                        <p class="product-description">Girasoles, solidago amarillo y rosas blancas con follaje verde, en papel negro con bordes amarillos. Parece recién cortado del campo. Para quien prefiere lo natural sobre lo formal.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Campo Abierto (Nº 72) por $75.000. ¿Podrías darme más información?', 'campo_abierto')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-medio" data-number="25" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto25.webp" alt="Rayo de Alegría - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 25</span>
+                        <span class="product-price">$105.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Rayo de Alegría</h3>
+                        <p class="product-description">Un girasol abierto en el centro y rosas en tonos fucsia y rosado alrededor, envueltas en papel negro y kraft. Es el arreglo que se regala cuando quieres subirle el ánimo a alguien sin decir una sola palabra. Perfecto para alegrar un día cualquiera.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Rayo de Alegría (Nº 25) por $105.000. ¿Podrías darme más información?', 'rayo_de_alegria')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-medio" data-number="26" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto26.webp" alt="Fuego y Sol - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 26</span>
+                        <span class="product-price">$105.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Fuego y Sol</h3>
+                        <p class="product-description">Rosas rojas rodeando un girasol, con toques de solidago amarillo y nube blanca sobre papel claro. Junta las dos cosas que una persona quiere sentir: que la aman y que la alegran. Ideal para sorprender en media semana.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Fuego y Sol (Nº 26) por $105.000. ¿Podrías darme más información?', 'fuego_y_sol')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-medio" data-number="28" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto28.webp" alt="Corazón al Sol - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 28</span>
+                        <span class="product-price">$120.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Corazón al Sol</h3>
+                        <p class="product-description">Rosas rojas abriéndose alrededor de un girasol central, en papel rojo con moño dorado. La escena es la de alguien recibiendo algo que se ve caro y se siente cálido al mismo tiempo. Un regalo que se fotografía apenas llega.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Corazón al Sol (Nº 28) por $120.000. ¿Podrías darme más información?', 'corazon_al_sol')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-medio" data-number="46" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto46.webp" alt="Fiesta del Sol - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 46</span>
+                        <span class="product-price">$225.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Fiesta del Sol</h3>
+                        <p class="product-description">Girasoles grandes con rosas rojas y nube, envueltos en papel vinotinto y negro con moño de dos tonos. Se ve festivo, generoso y alegre desde el primer vistazo. El regalo indicado para un cumpleaños o una celebración.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Fiesta del Sol (Nº 46) por $225.000. ¿Podrías darme más información?', 'fiesta_del_sol')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="girasoles precio-medio" data-number="47" data-keywords="girasoles">
+                    <div class="product-image">
+                        <img src="assets/foto47.webp" alt="Puro Sol - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 47</span>
+                        <span class="product-price">$240.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Puro Sol</h3>
+                        <p class="product-description">Girasoles frescos y abiertos con nube blanca alrededor, envueltos en papel negro con filo dorado. Sin rosas, sin mezclas: solo girasoles haciendo lo que mejor hacen. Para quien detesta lo cursi pero ama recibir flores.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Puro Sol (Nº 47) por $240.000. ¿Podrías darme más información?', 'puro_sol')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-alto" data-number="36" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto36.webp" alt="Sol de Media Tarde - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 36</span>
+                        <span class="product-price">$255.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sol de Media Tarde</h3>
+                        <p class="product-description">Girasoles y rosas rojas con eucalipto y helecho, montados en papel rosado con moño rojo y base firme para poner sobre una mesa. Llega parado y luce sin necesidad de florero. Un regalo de oficina o de casa que se roba la escena.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Sol de Media Tarde (Nº 36) por $255.000. ¿Podrías darme más información?', 'sol_de_media_tarde')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos canastas precio-alto" data-number="44" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto44.webp" alt="Canasta Amanecer - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 44</span>
+                        <span class="product-price">$255.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Canasta Amanecer</h3>
+                        <p class="product-description">Canasta de mimbre con rosas rojas de tallo alto, girasoles y follaje frondoso. Llega lista para dejar sobre una mesa o un escritorio, sin arreglar nada. Un detalle cálido para una casa, una oficina o una recuperación.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Canasta Amanecer (Nº 44) por $255.000. ¿Podrías darme más información?', 'canasta_amanecer')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-alto" data-number="45" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto45.webp" alt="Bouquet Mediodía - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 45</span>
+                        <span class="product-price">$255.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Bouquet Mediodía</h3>
+                        <p class="product-description">Girasoles y rosas rojas repartidos parejo en un ramo redondo sobre papel negro. Es energía pura envuelta para regalo. Para levantarle el día a alguien que está pasando por una semana pesada.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Bouquet Mediodía (Nº 45) por $255.000. ¿Podrías darme más información?', 'bouquet_mediodia')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-alto" data-number="37" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto37.webp" alt="Corazón Encendido - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 37</span>
+                        <span class="product-price">$278.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Corazón Encendido</h3>
+                        <p class="product-description">Girasoles grandes rodeados de rosas rojas y nube blanca, envueltos en papel negro con cintas largas. Es imposible pasar por al lado sin mirarlo. Para una sorpresa que quieres que se note desde la entrada.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Corazón Encendido (Nº 37) por $278.000. ¿Podrías darme más información?', 'corazon_encendido')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="girasoles" data-tags="rosas girasoles mixtos precio-alto" data-number="42" data-keywords="mixtos girasoles rosas">
+                    <div class="product-image">
+                        <img src="assets/foto42.webp" alt="El Sol Entre Rosas - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 42</span>
+                        <span class="product-price">$300.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">El Sol Entre Rosas</h3>
+                        <p class="product-description">Un girasol imponente en el centro, rodeado de rosas rojas y nube, envuelto en papel negro con kraft. Es el arreglo que combina la fuerza del girasol con la carga romántica de la rosa. Para una sorpresa que quieres que se sienta especial.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo El Sol Entre Rosas (Nº 42) por $300.000. ¿Podrías darme más información?', 'el_sol_entre_rosas')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <section class="seccion" id="premium" data-section="premium">
+                <div class="seccion-head">
+                    <h2>👑 Arreglos Premium</h2>
+                    <span class="ln"></span>
+                </div>
+                <p class="seccion-sub">Arreglos grandes, canastas y piezas para fechas que no se repiten</p>
+                <div class="products-grid">
+                <div class="product-card" data-section="premium" data-tags="rosas girasoles mixtos premium precio-medio" data-number="60" data-keywords="girasoles rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto60.webp" alt="Sol de Mediodía - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 60</span>
+                        <span class="product-price">$150.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Sol de Mediodía</h3>
+                        <p class="product-description">Rosas rojas coronadas por un girasol grande, solidago amarillo y follaje, en papel blanco con bordes dorados y moño rojo. Se ve grande desde la puerta. Para una fecha en la que no quieres pasar desapercibido.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Sol de Mediodía (Nº 60) por $150.000. ¿Podrías darme más información?', 'sol_de_mediodia')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-medio" data-number="62" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto62.webp" alt="Abrazo Rosa - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 62</span>
+                        <span class="product-price">$213.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Abrazo Rosa</h3>
+                        <p class="product-description">Rosas rosadas en gran cantidad con pequeños toques de solidago, en papel blanco con detalles dorados y cinta rosa. Voluminoso, delicado y elegante. Para la amistad que ya es familia.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Abrazo Rosa (Nº 62) por $213.000. ¿Podrías darme más información?', 'abrazo_rosa')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="67" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto67.webp" alt="Amor en Grande - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 67</span>
+                        <span class="product-price">$288.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Amor en Grande</h3>
+                        <p class="product-description">Rosas rojas en gran volumen formando una cúpula perfecta, en papel blanco con cinta roja. Llega y llena la habitación. Para la persona a la que le quieres decir todo.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Amor en Grande (Nº 67) por $288.000. ¿Podrías darme más información?', 'amor_en_grande')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="68" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto68.webp" alt="Pasión de Medianoche - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 68</span>
+                        <span class="product-price">$288.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Pasión de Medianoche</h3>
+                        <p class="product-description">Rosas rojas en gran cantidad sobre papel negro con bordes dorados. El contraste hace que el rojo se vea todavía más intenso. Un regalo de pareja que impone y no se olvida.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Pasión de Medianoche (Nº 68) por $288.000. ¿Podrías darme más información?', 'pasion_de_medianoche')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="71" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto71.webp" alt="Declaración Total - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 71</span>
+                        <span class="product-price">$313.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Declaración Total</h3>
+                        <p class="product-description">Rosas rojas en cúpula compacta rodeadas de nube blanca, en papel negro translúcido con bordes dorados. Es el ramo que se entrega en la puerta y se recuerda por años. Para decir te amo sin margen de error.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Declaración Total (Nº 71) por $313.000. ¿Podrías darme más información?', 'declaracion_total')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="69" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto69.webp" alt="Para Toda la Vida - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 69</span>
+                        <span class="product-price">$338.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Para Toda la Vida</h3>
+                        <p class="product-description">Rosas rojas abundantes con helechos verdes, envueltas en papel blanco y moño rojo. Clásico, imponente y fresco. Para un amor que se celebra en serio.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Para Toda la Vida (Nº 69) por $338.000. ¿Podrías darme más información?', 'para_toda_la_vida')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="52" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto52.webp" alt="Corazón en Dos Tiempos - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 52</span>
+                        <span class="product-price">$345.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Corazón en Dos Tiempos</h3>
+                        <p class="product-description">Rosas blancas en el centro rodeadas por un anillo de rosas rojas, con nube en el borde y papel negro con kraft. El diseño se lee solo: dos historias que se volvieron una. Un regalo de aniversario con mucho peso visual.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Corazón en Dos Tiempos (Nº 52) por $345.000. ¿Podrías darme más información?', 'corazon_en_dos_tiempos')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas canastas premium precio-alto" data-number="53" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto53.webp" alt="Canasta Inolvidable - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 53</span>
+                        <span class="product-price">$375.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Canasta Inolvidable</h3>
+                        <p class="product-description">Canasta amplia con rosas rojas repartidas entre abundante nube blanca, follaje verde y tarjeta en lo alto. Llena una mesa entera y perfuma el espacio. Para una fecha importante, una casa nueva o un agradecimiento en grande.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Canasta Inolvidable (Nº 53) por $375.000. ¿Podrías darme más información?', 'canasta_inolvidable')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas girasoles mixtos premium precio-alto" data-number="43" data-keywords="mixtos girasoles rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto43.webp" alt="Cumbre de Admiración - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 43</span>
+                        <span class="product-price">$450.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cumbre de Admiración</h3>
+                        <p class="product-description">Arreglo alto en forma de pino con rosas rojas y girasoles distribuidos entre follaje verde y tarjeta en lo alto. Se ve desde lejos y comunica reconocimiento inmediato. Ideal para grados, ascensos, inauguraciones y homenajes de empresa.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Cumbre de Admiración (Nº 43) por $450.000. ¿Podrías darme más información?', 'cumbre_de_admiracion')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="49" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto49.webp" alt="Explosión Rosa - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 49</span>
+                        <span class="product-price">$495.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Explosión Rosa</h3>
+                        <p class="product-description">Rosas fucsia y rosadas en gran volumen con nube distribuida entre ellas, envueltas en papel rosado. Es de los que hay que sostener con las dos manos y se recuerdan por años. Para un cumpleaños grande o una fecha que no se repite.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Explosión Rosa (Nº 49) por $495.000. ¿Podrías darme más información?', 'explosion_rosa')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="54" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto54.webp" alt="Confesión Eterna - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 54</span>
+                        <span class="product-price">$495.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Confesión Eterna</h3>
+                        <p class="product-description">Rosas rojas en gran volumen sobre base firme, envueltas en papel negro con tarjeta escrita en lo alto. Llega parado, se ve monumental y no necesita explicación. Para el momento en que quieres decirlo todo de una sola vez.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Confesión Eterna (Nº 54) por $495.000. ¿Podrías darme más información?', 'confesion_eterna')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                <div class="product-card" data-section="premium" data-tags="rosas premium precio-alto" data-number="51" data-keywords="rosas premium">
+                    <div class="product-image">
+                        <img src="assets/foto51.webp" alt="Océano Rojo - Arreglo de flores a domicilio en Barranquilla" loading="lazy">
+                        <span class="product-number">Nº 51</span>
+                        <span class="product-price">$570.000</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Océano Rojo</h3>
+                        <p class="product-description">Rosas rojas en gran cantidad formando una cúpula compacta, bordeadas de nube y envueltas en papel negro translúcido. Es el arreglo más imponente del catálogo. Para una propuesta, un aniversario redondo o una declaración que no admite dudas.</p>
+                        <button class="product-button" onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Océano Rojo (Nº 51) por $570.000. ¿Podrías darme más información?', 'oceano_rojo')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 22a10 10 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A10 10 0 1 1 12 22z"/></svg> Pedir por WhatsApp</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <div class="cotiza-banner">
+                <div>
+                    <h3>¿Tienes algo en mente?</h3>
+                    <p>Armamos el arreglo según tu gusto, la ocasión y tu presupuesto.</p>
+                </div>
+                <button onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, quiero cotizar un arreglo personalizado. ¿Me ayudan?', 'cotiza_personalizado')">Cotizar por WhatsApp</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p><strong>FLORISTERÍA LAS HADAS</strong></p>
+        <p>Carrera 17D #17-121, Barrio Eduardo Santos La Playa · Barranquilla, Colombia · Envíos todos los días</p>
+        <p>WhatsApp: <a href="https://wa.me/573019989093">301 998 9093</a></p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" aria-label="WhatsApp" onclick="return trackWhatsAppLead('https://wa.me/573019989093', 'floating_button_catalogo')">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" /></svg>
+        </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="image-preview-modal" class="image-preview-modal" role="dialog" aria-modal="true" aria-label="Vista previa de imagen" hidden>
+        <button class="image-preview-close" type="button" aria-label="Cerrar vista previa">&times;</button>
+        <div class="image-preview-content" role="document">
+            <img class="image-preview-img" alt="" />
+            <div class="image-preview-caption"></div>
+        </div>
+    </div>
+
+
+    <script>
+        // ============================================================
+        // CATÁLOGO · filtros, búsqueda, contadores, secciones, lightbox
+        // ============================================================
+        (function () {
+            function normalize(str) {
+                return (str || '').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var filterButtons = document.querySelectorAll('.filter-btn');
+                var cards = document.querySelectorAll('.product-card');
+                var sections = document.querySelectorAll('.seccion');
+                var searchInput = document.getElementById('search-input');
+                var clearBtn = document.getElementById('search-clear');
+                var resultsCount = document.getElementById('results-count');
+                var emptyState = document.getElementById('empty-state');
+                var currentCategory = 'all';
+
+                // Haystack de búsqueda por tarjeta
+                cards.forEach(function (card) {
+                    var n = card.getAttribute('data-number') || '';
+                    var title = card.querySelector('.product-title');
+                    var desc = card.querySelector('.product-description');
+                    var hay = normalize(
+                        (n ? n + ' #' + n + ' n' + n + ' nº' + n + ' ' : '') +
+                        (title ? title.textContent : '') + ' ' +
+                        (desc ? desc.textContent : '') + ' ' +
+                        (card.getAttribute('data-keywords') || '') + ' ' +
+                        (card.getAttribute('data-tags') || '').replace(/-/g, ' ')
+                    );
+                    card.setAttribute('data-haystack', hay);
+                });
+
+                function applyFilters() {
+                    var rawSearch = searchInput ? searchInput.value : '';
+                    var search = normalize(rawSearch.trim());
+                    var visible = 0;
+                    cards.forEach(function (card) {
+                        var tags = ' ' + (card.getAttribute('data-tags') || '') + ' ';
+                        var matchCat = currentCategory === 'all' || tags.indexOf(' ' + currentCategory + ' ') >= 0;
+                        var matchSearch = !search || (card.getAttribute('data-haystack') || '').indexOf(search) >= 0;
+                        if (matchCat && matchSearch) { card.classList.remove('hidden'); visible++; }
+                        else { card.classList.add('hidden'); }
+                    });
+                    // Ocultar secciones vacías
+                    sections.forEach(function (sec) {
+                        var any = sec.querySelector('.product-card:not(.hidden)');
+                        sec.classList.toggle('hidden', !any);
+                    });
+                    if (resultsCount) resultsCount.textContent = visible;
+                    if (emptyState) emptyState.style.display = visible === 0 ? 'block' : 'none';
+                    if (clearBtn) clearBtn.style.display = rawSearch ? 'flex' : 'none';
+                }
+
+                function setActiveButton(category) {
+                    filterButtons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-category') === category); });
+                }
+
+                function updateURL(category) {
+                    var url = new URL(window.location.href);
+                    if (category === 'all') {
+                        url.searchParams.delete('category');
+                        window.history.replaceState({}, '', url.pathname + url.search);
+                    } else {
+                        url.searchParams.set('category', category);
+                        window.history.replaceState({}, '', url.pathname + url.search + '#' + category);
+                    }
+                }
+
+                function applyCategory(category, updateUrl) {
+                    var valid = Array.prototype.map.call(filterButtons, function (b) { return b.getAttribute('data-category'); });
+                    if (valid.indexOf(category) < 0) category = 'all';
+                    currentCategory = category;
+                    setActiveButton(category);
+                    applyFilters();
+                    if (updateUrl !== false) updateURL(category);
+                }
+
+                filterButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        applyCategory(this.getAttribute('data-category'), true);
+                    });
+                });
+
+                if (searchInput) searchInput.addEventListener('input', applyFilters);
+                if (clearBtn) {
+                    clearBtn.style.display = 'none';
+                    clearBtn.addEventListener('click', function () {
+                        if (searchInput) { searchInput.value = ''; searchInput.focus(); }
+                        applyFilters();
+                    });
+                }
+
+                function readCategoryFromURL() {
+                    var params = new URLSearchParams(window.location.search);
+                    var cat = params.get('category');
+                    if (!cat) {
+                        var hash = window.location.hash.replace(/^#\??/, '').trim();
+                        // Los anclas de sección no filtran, solo desplazan
+                        if (hash && ["rosas", "girasoles", "premium"].indexOf(hash) < 0) cat = hash;
+                    }
+                    return cat;
+                }
+
+                var initial = readCategoryFromURL();
+                applyCategory(initial || 'all', false);
+
+                window.addEventListener('popstate', function () { applyCategory(readCategoryFromURL() || 'all', false); });
+
+                // Nav de secciones: resaltar la sección visible
+                var navLinks = document.querySelectorAll('.section-nav a');
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (en) {
+                            if (en.isIntersecting) {
+                                var id = en.target.id;
+                                navLinks.forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-section') === id); });
+                            }
+                        });
+                    }, { rootMargin: '-40% 0px -55% 0px' });
+                    sections.forEach(function (s) { io.observe(s); });
+                }
+
+                // Contadores regresivos por fecha (frase según la fase; ver js/urgencia.js)
+                document.querySelectorAll('.countdown[data-date]').forEach(function (el) {
+                    var iso = el.getAttribute('data-date');
+                    if (window.LasHadasUrgencia) { el.textContent = window.LasHadasUrgencia.pastilla(iso); return; }
+                    var parts = iso.split('-');
+                    var target = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+                    var today = new Date(); today.setHours(0, 0, 0, 0);
+                    var days = Math.round((target - today) / 86400000);
+                    if (days > 1) el.textContent = 'Faltan ' + days + ' días';
+                    else if (days === 1) el.textContent = '¡Es mañana!';
+                    else if (days === 0) el.textContent = '¡Es hoy!';
+                    else el.textContent = '';
+                });
+
+                // Lightbox
+                var modal = document.getElementById('image-preview-modal');
+                var imgEl = modal.querySelector('.image-preview-img');
+                var capEl = modal.querySelector('.image-preview-caption');
+                function openPreview(src, alt, title) {
+                    imgEl.src = src; imgEl.alt = alt || ''; capEl.textContent = title || alt || '';
+                    modal.hidden = false; void modal.offsetWidth;
+                    modal.classList.add('is-open'); document.body.classList.add('preview-open');
+                }
+                function closePreview() {
+                    modal.classList.remove('is-open'); document.body.classList.remove('preview-open');
+                    setTimeout(function () { modal.hidden = true; imgEl.src = ''; }, 260);
+                }
+                document.addEventListener('click', function (e) {
+                    var t = e.target;
+                    if (!t || (t.closest && t.closest('button, a'))) return;
+                    var wrap = t.closest && t.closest('.product-image');
+                    if (!wrap) return;
+                    var img = wrap.querySelector('img');
+                    if (!img) return;
+                    e.preventDefault();
+                    var card = wrap.closest('.product-card');
+                    var tt = card ? card.querySelector('.product-title') : null;
+                    openPreview(img.currentSrc || img.src, img.alt, tt ? tt.textContent.trim() : '');
+                });
+                modal.querySelector('.image-preview-close').addEventListener('click', closePreview);
+                modal.addEventListener('click', function (e) { if (e.target === modal) closePreview(); });
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('is-open')) closePreview(); });
+            });
+        })();
+    </script>
+</body>
+
+</html>

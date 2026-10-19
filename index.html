@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristería Las Hadas - Flores a Domicilio en Barranquilla, Colombia | Flores Frescas y Secas</title>
+    <meta name="description"
+        content="Floristería Las Hadas - La mejor florería de Barranquilla. Flores frescas, secas, regalos y entrega a domicilio. Mayoristas y minoristas.">
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Floristería Las Hadas",
+        "image": "https://lashadasfloristeria.dondeseria.com/assets/logo.webp",
+        "@id": "https://lashadasfloristeria.dondeseria.com",
+        "url": "https://lashadasfloristeria.dondeseria.com",
+        "telephone": "+573019989093",
+        "address": {
+            "@type": "PostalAddress",
+                        "streetAddress": "Carrera 17D #17-121, Barrio Eduardo Santos La Playa",
+                        "addressLocality": "Barranquilla",
+            "addressRegion": "Atlántico",
+            "addressCountry": "CO"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday", 
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Google Ads (Floristería Las Hadas) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17881122637"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17881122637');
+    </script>
+
+    <!-- FUNCIÓN DE TRACKING WHATSAPP PARA GOOGLE ADS -->
+    <script>
+        function trackWhatsAppLead(whatsappUrl, eventLabel) {
+            // Registra la conversión y abre WhatsApp en el mismo clic
+            try {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', { 'send_to': 'AW-17881122637/CCIXCOr22dEcEM2Osc5C' });
+                }
+            } catch (error) {
+                console.error('Error en tracking:', error);
+            }
+            window.open(whatsappUrl, '_blank');
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.webp" alt="Floristería Las Hadas Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <!--<li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="catalogo.html#cajas">Cumpleaños</a></li>
+                <li><a href="catalogo.html#girasoles">Girasoles</a></li>-->
+                <li><a href="catalogo.html#rosas">Rosas</a></li>
+                <li><a href="https://wa.me/573019989093" target="_blank">WhatsApp</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="assets/wallpaper.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Florería Premium en Barranquilla</h1>
+            <p class="hero-subtitle">Damos vida a momentos inolvidables con las flores más bellas de la zona</p>
+            <button class="cta-button"
+                onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, quiero hacer un pedido de flores', 'hero_button')">
+                Hacer Pedido
+            </button>
+            <a href="/catalogo.html" class="cta-button catalog-btn">
+                <span class="heart-emoji">💖</span>
+                Ver Catálogo
+                <span class="heart-emoji">💖</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Cards -->
+    <section class="products">
+        <div class="container">
+            <p class="section-title">Lo Más Destacado del Catálogo</p>
+            <div class="cards-grid">
+                <!-- Producto: Corazón al Sol -->
+                <div class="product-card">
+                    <div class="product-badge">Destacado</div>
+                    <div class="product-image">
+                        <img src="assets/foto28.webp" alt="Corazón al Sol - Arreglo de flores a domicilio en Barranquilla">
+                    </div>
+                    <div class="card-content">
+                        <p class="product-name">Corazón al Sol</p>
+                        <p class="product-description">Rosas rojas abriéndose alrededor de un girasol central, en papel rojo con moño dorado. La escena es la de alguien recibiendo algo que se ve caro y se siente cálido al mismo tiempo. Un regalo que se fotografía apenas llega.</p>
+                        <p class="product-price">$120.000</p>
+                        <button class="order-btn"
+                            onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Corazón al Sol (Nº 28) por $120.000. ¿Podrías darme más información?', 'corazon_al_sol')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto: Todo por Ti -->
+                <div class="product-card">
+                    <div class="product-badge">Destacado</div>
+                    <div class="product-image">
+                        <img src="assets/foto29.webp" alt="Todo por Ti - Arreglo de flores a domicilio en Barranquilla">
+                    </div>
+                    <div class="card-content">
+                        <p class="product-name">Todo por Ti</p>
+                        <p class="product-description">Rosas rojas apretadas en forma redonda con destellos de nube blanca, envueltas en papel blanco con filos dorados. Compacto, elegante y sin adornos innecesarios. El detalle perfecto para un aniversario o una reconciliación.</p>
+                        <p class="product-price">$135.000</p>
+                        <button class="order-btn"
+                            onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo Todo por Ti (Nº 29) por $135.000. ¿Podrías darme más información?', 'todo_por_ti')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Producto: El Sol Entre Rosas -->
+                <div class="product-card">
+                    <div class="product-badge">Destacado</div>
+                    <div class="product-image">
+                        <img src="assets/foto42.webp" alt="El Sol Entre Rosas - Arreglo de flores a domicilio en Barranquilla">
+                    </div>
+                    <div class="card-content">
+                        <p class="product-name">El Sol Entre Rosas</p>
+                        <p class="product-description">Un girasol imponente en el centro, rodeado de rosas rojas y nube, envuelto en papel negro con kraft. Es el arreglo que combina la fuerza del girasol con la carga romántica de la rosa. Para una sorpresa que quieres que se sienta especial.</p>
+                        <p class="product-price">$300.000</p>
+                        <button class="order-btn"
+                            onclick="return trackWhatsAppLead('https://wa.me/573019989093?text=Hola, me interesa el arreglo El Sol Entre Rosas (Nº 42) por $300.000. ¿Podrías darme más información?', 'el_sol_entre_rosas')">
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Collage -->
+    <section class="gallery">
+        <div class="container">
+            <p class="section-title">Muestra de Nuestro Trabajo</p>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="assets/foto37.webp" alt="Arreglo floral 1">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto49.webp" alt="Arreglo floral 2">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto42.webp" alt="Arreglo floral 3">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto30.webp" alt="Arreglo floral 4">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto45.webp" alt="Arreglo floral 5">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/foto46.webp" alt="Arreglo floral 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Flores Secas</h2>
+                    <p>Conoce nuestra colección exclusiva de flores secas, ideales para una decoración elegante y de larga duración. Estas flores conservan su belleza natural durante mucho más tiempo y son perfectas para casas, oficinas y eventos especiales. Elegimos cada pieza con cuidado y la tratamos con técnicas artesanales que mantienen sus colores y formas originales, dando forma a arreglos únicos que no piden mantenimiento y suman un aire sofisticado a cualquier ambiente.</p>
+                    <button class="service-btn" onclick="window.open('tienda-flores-secas-barranquilla.html', '_self')">Ver
+                        Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto31.webp" alt="Flores Secas">
+                </div>
+            </div>
+
+            <div class="services-grid reverse">
+                <div class="service-image">
+                    <img src="assets/foto51.webp" alt="Mayorista">
+                </div>
+                <div class="service-item">
+                    <h2>Florería Mayorista</h2>
+                    <p>Somos un proveedor de confianza para grandes eventos, matrimonios, celebraciones de empresa y otros floristas. Manejamos precios especiales por volumen y la variedad más amplia de flores frescas, tanto nacionales como importadas. Nuestro servicio mayorista contempla asesoría personalizada, envíos programados y flexibilidad para pedidos de gran tamaño. Nos abastecemos de los mejores productores de la región para asegurar frescura y calidad en cada entrega, ajustándonos a lo que necesita cada cliente mayorista.</p>
+                    <button class="service-btn" onclick="window.open('floreria-mayorista-barranquilla.html', '_self')">Ver
+                        Más</button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Regalos</h2>
+                    <p>Completa tus arreglos florales con nuestra selección de regalos especiales: chocolates gourmet, velas aromáticas, peluches, globos temáticos y accesorios decorativos únicos. Escogemos cada obsequio con dedicación para generar experiencias emotivas que se recuerden. Tenemos alternativas para cualquier ocasión: cumpleaños, aniversarios, San Valentín, Día de la Madre y otras celebraciones especiales. Nuestro equipo te acompaña para armar el combo ideal que diga justo lo que quieres transmitir.</p>
+                    <button class="service-btn" onclick="window.open('tienda-regalos-barranquilla.html', '_self')">Ver
+                        Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto44.webp" alt="Regalos">
+                </div>
+            </div>
+
+            <div class="services-grid reverse">
+                <div class="service-image">
+                    <img src="assets/foto25.webp" alt="Entrega">
+                </div>
+                <div class="service-item">
+                    <h2>Entrega de Flores</h2>
+                    <p>Ofrecemos envíos rápidos y seguros en toda Barranquilla, Colombia, y sus alrededores. Nuestro equipo especializado se asegura de que tus flores lleguen en perfectas condiciones y justo cuando las necesitas. Hacemos entregas el mismo día para pedidos recibidos antes de las 2:00 PM, envíos programados para fechas especiales y un servicio express para urgencias. Cada entrega cuenta con seguimiento en tiempo real y confirmación con foto de la recepción, para que estés completamente tranquilo.</p>
+                    <button class="service-btn" onclick="window.open('entrega-flores-barranquilla.html', '_self')">Ver
+                        Más</button>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <h2>Tienda de Canastas de Regalos</h2>
+                    <p>Canastas con temática pensadas para sorprender en cualquier ocasión especial. Unimos flores frescas o secas con productos gourmet, vinos seleccionados, chocolates artesanales, fruta fresca y accesorios únicos. Personalizamos cada canasta de acuerdo con la ocasión y el presupuesto, desde propuestas corporativas elegantes hasta canastas románticas de carácter íntimo. Nuestro equipo de diseño prepara presentaciones espectaculares que impresionan desde el primer instante, ideales como regalo empresarial, para celebraciones en familia o para un gesto romántico especial.</p>
+                    <button class="service-btn" onclick="window.open('tienda-canasta-regalos-barranquilla.html', '_self')">Ver
+                        Más</button>
+                </div>
+                <div class="service-image">
+                    <img src="assets/foto53.webp" alt="Canastas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map -->
+    <section class="location">
+        <div class="container">
+            <p class="section-title">Dónde encontrarnos</p>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Carrera%2017D%20%2317-121%2C%20Eduardo%20Santos%20La%20Playa%2C%20Barranquilla%2C%20Atl%C3%A1ntico&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-brand">Floristería Las Hadas</p>
+                <p class="footer-year">2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="#" onclick="return trackWhatsAppLead('https://wa.me/573019989093', 'floating_button')">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.488" />
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        // Valentine's Modal Auto-close
+        window.addEventListener('load', function() {
+            const modal = document.getElementById('valentineModal');
+            if (!modal) return;
+            
+            // Cerrar automáticamente después de 5 segundos
+            setTimeout(function() {
+                modal.style.display = 'none';
+            }, 5000);
+            
+            // Cerrar al hacer click en el overlay
+            const overlay = document.querySelector('.valentine-overlay');
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                });
+            }
+        });
+    </script>
+
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
